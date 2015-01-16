@@ -23,3 +23,12 @@ var total = totals[0] * totals[1];
 console.log(total);
 //multiply the gallons of gas needed by the price of gas with the grocery store points to get the total price.
 
+alert("The total price for gas will be $" + total.toFixed(2));
+//added the alert to give the total price of gas and force JavaScript to round to the nearest hundredth.
+
+/* Input grocery store points as 1000, 
+Input price of gas as $1.85,
+Input number of gallons needed as 16.4 
+and my calculator gave me a total of $13.94. */
+
+
