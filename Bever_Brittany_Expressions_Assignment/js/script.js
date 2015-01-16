@@ -1,4 +1,4 @@
-// Bever_Brittany_Expressions_Assignment
+// Bever_Brittany_Expressions_Assignment 15JAN2015
 
 var groceryStorePoints = prompt("We will be calculating how much it will cost to buy gas using grocery store rewards points. \nPlease enter the number of points");
 //collect the number of grocery store points being used.
