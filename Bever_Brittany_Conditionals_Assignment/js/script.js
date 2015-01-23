@@ -17,13 +17,18 @@ var dataPackageCost = prompt("Please enter the price of your data package");
 //collect the cost of the data package without overages and verify there was an entry.
 
 var dataOver = (dataUsage - dataCap);
+//established the dataOver amount
 
 if (dataOver > 0){
 	var dataCost = (dataOver * dataCostPerMbOver);
 	var costTotal = (Number(dataCost) + Number(dataPackageCost));
-	console.log("your bill for data will be"costTotal)
-	}else{
+	console.log("your bill for data will be $" + costTotal);
+	}else if(dataOver <= 0){
 		var costTotal = (dataPackageCost);
-		console.log("your bill for data will be"costTotal)
+		console.log("your bill for data will be $" + costTotal);
 		}
-		
+//calculated the amount it would cost if there were overages. also added the overage amount to the data package cost. I also made it to if the overage amount is 0 that it would just be the data package cost.
+
+/* I plugged in the amount it costs for each mb over which was $0.01. I entered the data cap which is 2000 mb. I entered the amount used which was 3000 mb. I entered the cost of the data package which is $24.00. It then calculated that the amount of the bill is $34.00.
+*/
+
