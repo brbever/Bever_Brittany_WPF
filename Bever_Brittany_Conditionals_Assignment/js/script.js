@@ -20,10 +20,10 @@ var dataOver = (dataUsage - dataCap);
 
 if (dataOver > 0){
 	var dataCost = (dataOver * dataCostPerMbOver);
-	var costTotal = (dataCost + dataPackageCost);
-	console.log(costTotal)
+	var costTotal = (Number(dataCost) + Number(dataPackageCost));
+	console.log("your bill for data will be"costTotal)
 	}else{
 		var costTotal = (dataPackageCost);
-		console.log(costTotal)
+		console.log("your bill for data will be"costTotal)
 		}
 		
