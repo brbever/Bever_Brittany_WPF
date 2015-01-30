@@ -17,7 +17,7 @@ while (boxPrice == "") {
 
 var calcDayPrice = function(b, d, p) {
 	daysPerBox = b / d;
-	pricePerDay = daysPerBox / p;
+	pricePerDay = p / daysPerBox;
 	return pricePerDay.toFixed(2);
 }
 
@@ -25,19 +25,19 @@ var dayPrice = calcDayPrice(diapersPerBox, diapersPerDay, boxPrice);
 
 console.log("The price of diapers per day is $" + dayPrice);
 
-var monthTotals = priceCalc(dayPrice);
+var monthTotals = monthCalc(dayPrice);
 
-function priceCalc(d){
+function monthCalc(d){
 	monthPrice = d * 30;
-	return monthPrice;
+	return monthPrice.toFixed(2);
 }
 
-console.log("The price for diapers per month is $" + monthPrice);
+console.log("The price for diapers per month is $" + monthTotals);
 
-var yearTotals = priceCalc(dayPrice);
+var yearTotals = yearCalc(monthTotals);
 
-function priceCalc(d){
-	yearPrice = yearPrice * 12;
-	return yearPrice;
+function yearCalc(m){
+	yearPrice = m * 12;
+	return yearPrice.toFixed(2);
 }
-console.log("The price for diapers per year is $" + yearPrice);
+console.log("The price for diapers per year is $" + yearTotals);
